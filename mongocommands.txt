@@ -9,5 +9,34 @@ db.tempCollection.insertMany([{},{},{},{},{},{}])
 (LOCAL mongoexport)
 mongoexport --db <database> --collection <collection> --out <filename>
 
-(expoerted as array of JSON objects)
+(exported as array of JSON objects)
 mongoexport --db newdb --collection persons --out empPersons.json --jsonArray
+
+(exported using query)
+mongoexport --db newdb --collection persons --out stuPersons.json --query "{\"index\":3}"
+
+(load data from json file)
+mongoimport --db newdb --collection personsImport --file newPersons.json
+
+(dump)
+mongodump
+
+(dump particular database)
+mongodump --db myDb
+
+(to create archive)
+mongodump --db newdb --archive=newDump.gz --gzip
+
+(restore data from the mongodb dump)
+mongorestore
+
+(restore from archive)
+mongorestore --archive=newDump.gz --gzip
+
+(MongoDB real-time statistics(local server))
+mongostat
+
+(top MongoDB current read and write operations)
+mongotop
+(update mongotop table from time to time, eg. each three minutes)
+mongotop 180
