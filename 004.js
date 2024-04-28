@@ -1,0 +1,1 @@
+db.persons.find({},{"company.location":1}).limit(10)

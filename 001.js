@@ -1,0 +1,5 @@
+//db.getCollection('cursor').find({})
+//db.getCollection('cursor').find({}).count()
+//db.getCollection('cursor').find({}).limit(5)
+//db.getCollection('cursor').find({}).skip(10)
+db.getCollection('cursor').find({}).sort({index:-1})
