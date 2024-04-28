@@ -1,0 +1,13 @@
+Launch Server
+C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe
+
+Launch Shell
+C:\Program Files\MongoDB\Server\7.0\bin\mongosh.exe
+
+db.tempCollection.insertMany([{},{},{},{},{},{}])
+
+(LOCAL mongoexport)
+mongoexport --db <database> --collection <collection> --out <filename>
+
+(expoerted as array of JSON objects)
+mongoexport --db newdb --collection persons --out empPersons.json --jsonArray
